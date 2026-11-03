@@ -1,27 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1250" viewBox="0 0 1800 1250">
-<defs><marker id="arr" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#526176"/></marker><style>
-.title{font: bold 48px Arial;fill:#14243a}.sub{font:23px Arial;fill:#526176}.h{font:bold 25px Arial;fill:#14243a}.p{font:18px Arial;fill:#526176}.edge{stroke:#526176;stroke-width:5;fill:none;marker-end:url(#arr)}.green{stroke:#4a9870}.red{stroke:#c46b61}
-</style></defs>
-<rect width="1800" height="1250" fill="#f7f9fc"/>
-<text x="90" y="95" class="title">LearnPath — V1 System Architecture</text>
-<text x="92" y="145" class="sub">Evidence-based learning resource recommendations using Retrieval-Augmented Generation (RAG)</text>
-<g stroke-width="4">
-<rect x="90" y="220" width="300" height="120" rx="22" fill="#eaf2ff" stroke="#4775a8"/><text x="112" y="263" class="h">Learner</text><text x="112" y="300" class="p">Topic • experience level • goal</text>
-<rect x="470" y="220" width="300" height="120" rx="22" fill="white" stroke="#4775a8"/><text x="492" y="263" class="h">Application Interface</text><text x="492" y="300" class="p">Collect recommendation inputs</text>
-<rect x="850" y="220" width="300" height="120" rx="22" fill="white" stroke="#4775a8"/><text x="872" y="263" class="h">Input Validation</text><text x="872" y="300" class="p">Check fields and input format</text>
-<rect x="1230" y="220" width="440" height="120" rx="22" fill="white" stroke="#4775a8"/><text x="1252" y="263" class="h">Resource Retrieval</text><text x="1252" y="300" class="p">Search approved free-resource catalogue</text>
-<rect x="1230" y="440" width="440" height="140" rx="22" fill="#fff7e8" stroke="#c28a2c"/><text x="1252" y="485" class="h">Approved Resource Catalogue</text><text x="1252" y="525" class="p">Curated metadata, descriptions and source URLs</text>
-<rect x="850" y="465" width="300" height="120" rx="22" fill="white" stroke="#4775a8"/><text x="872" y="508" class="h">Matching &amp; Ranking</text><text x="872" y="545" class="p">Topic, level and goal match</text>
-<rect x="470" y="465" width="300" height="120" rx="22" fill="#f2edff" stroke="#8665b5"/><text x="492" y="508" class="h">Evidence Check</text><text x="492" y="545" class="p">Is evidence sufficient?</text>
-<rect x="80" y="720" width="420" height="150" rx="22" fill="#eaf7f0" stroke="#4a9870"/><text x="102" y="765" class="h">Grounded AI Explanation</text><text x="102" y="805" class="p">Explain using retrieved records only</text>
-<rect x="620" y="720" width="420" height="150" rx="22" fill="#fff1f0" stroke="#c46b61"/><text x="642" y="765" class="h">No-Match Response</text><text x="642" y="805" class="p">Explain when evidence is insufficient</text>
-<rect x="1180" y="720" width="520" height="150" rx="22" fill="#eaf2ff" stroke="#4775a8"/><text x="1202" y="765" class="h">Recommendation Response</text><text x="1202" y="805" class="p">Title • provider • source link • explanation</text>
-<rect x="300" y="1010" width="1200" height="140" rx="22" fill="#eef2f5" stroke="#718096"/><text x="330" y="1060" class="h">Evaluation &amp; Monitoring</text><text x="330" y="1100" class="p">Relevance • source traceability • explanation grounding • latency • no-match handling</text>
-</g>
-<path class="edge" d="M390 280 H470 M770 280 H850 M1150 280 H1230 M1450 340 V440 M1230 510 H1150 M850 525 H770"/>
-<path class="edge green" d="M620 585 L290 720 M500 795 H1180"/>
-<path class="edge red" d="M620 585 L830 720 M1040 795 H1180"/>
-<path class="edge" d="M1440 870 V940 H900 V1010"/>
-<text x="250" y="660" class="h" fill="#39845e">YES</text><text x="795" y="660" class="h" fill="#b75b52">NO</text>
-<text x="90" y="1190" class="p">Conceptual V1 architecture — technology choices intentionally remain implementation-independent.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="2040" height="1480" viewBox="0 0 2040 1480" role="img" aria-labelledby="title desc" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplMDZkZDlhOS01ODAwLTQ2OWYtOWYyZC03ZjYzMDhiYzA1YTkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaBUzAuZTKXRB9cjYe/d/L44AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDowMTk4YmJhMy1jYWVjLTQ3MTQtYTk4Yy0zODM0YTQ3NmJlYjBscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoBKYy53LnxDRQHWNSuKNmxwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggAntIPHe/wl52Iq9WXcUQU+EZb31VLhsoBXr0RNntGBqkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaB/+aEwhciScnEtSU3nmVcgAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCAXAwCe19EYG/tMULAbHscqN5wIspXVXPQiq9jTF3TxUWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjCZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmUwNmRkOWE5LTU4MDAtNDY5Zi05ZjJkLTdmNjMwOGJjMDVhOS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmYzODZmOGZiLTFjOTYtNDg0My1iYmJhLWMzMmU0MDUyNWM4NXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCACe0g8d7/CXnYir1ZdxRBT4RlvfVUuGygFevRE2e0YGqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg4EZXj+lvWt9vaWNFdPrkLM51ONvCtF3pgVP3wFHJk6eiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgguHMHLHIaiP1jLkwAyJ2zpkkp/kUAG40O189hzmdbbdF0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQCpG7x7VQkfB2mQlu+xzkg3NlWtkh0di0mAl2TIqsQNoyGh3JhDETSGw52aX4a1OIHRgjieFJor5KNzyog7QJWs=</c2pa:manifest></metadata>
+<title id="title">LearnPath V1 System Architecture</title>
+<desc id="desc">A top-to-bottom architecture showing learner input, validation, resource retrieval from an approved catalogue, matching and ranking, an evidence check that leads either to a grounded explanation or a no-match response, the recommendation response to the learner, and evaluation and monitoring.</desc>
+<defs>
+  <marker id="arrow" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" refX="14" refY="8" orient="auto"><path d="M0 1 L15 8 L0 15 Z" fill="#52657a"/></marker>
+  <marker id="greenArrow" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" refX="14" refY="8" orient="auto"><path d="M0 1 L15 8 L0 15 Z" fill="#21845b"/></marker>
+  <marker id="redArrow" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" refX="14" refY="8" orient="auto"><path d="M0 1 L15 8 L0 15 Z" fill="#c25454"/></marker>
+  <style>
+    .title{font:700 46px Arial,sans-serif;fill:#172b45}
+    .subtitle{font:23px Arial,sans-serif;fill:#5b6b7e}
+    .section{font:700 16px Arial,sans-serif;fill:#5b6b7e;letter-spacing:2px}
+    .step{font:700 16px Arial,sans-serif;fill:#fff}
+    .heading{font:700 22px Arial,sans-serif;fill:#172b45}
+    .body{font:18px Arial,sans-serif;fill:#526176}
+    .small{font:16px Arial,sans-serif;fill:#526176}
+    .label{font:700 17px Arial,sans-serif}
+    .node{stroke-width:3}
+    .line{fill:none;stroke:#52657a;stroke-width:4;marker-end:url(#arrow);stroke-linecap:round;stroke-linejoin:round}
+    .yes{fill:none;stroke:#21845b;stroke-width:4;marker-end:url(#greenArrow);stroke-linecap:round;stroke-linejoin:round}
+    .no{fill:none;stroke:#c25454;stroke-width:4;marker-end:url(#redArrow);stroke-linecap:round;stroke-linejoin:round}
+  </style>
+</defs>
+<rect width="2040" height="1480" fill="#f6f8fb"/>
+<text x="80" y="90" class="title">LearnPath — V1 System Architecture</text>
+<text x="82" y="134" class="subtitle">Evidence-based learning resource recommendations using Retrieval-Augmented Generation (RAG)</text>
+<text x="80" y="212" class="section">1. LEARNER INPUT &amp; RESOURCE MATCHING</text>
+<rect class="node" x="80" y="240" width="280" height="200" rx="20" fill="#eaf2ff" stroke="#4c79ad"/>
+<circle cx="110" cy="272" r="17" fill="#4c79ad"/><text x="110" y="278" text-anchor="middle" class="step">1</text>
+<text x="110" y="328" class="heading">Learner</text>
+<text x="110" y="364" class="body">• Learning topic</text>
+<text x="110" y="392" class="body">• Experience level</text>
+<text x="110" y="420" class="body">• Learning goal</text>
+<rect class="node" x="400" y="240" width="280" height="200" rx="20" fill="#fff" stroke="#4c79ad"/>
+<circle cx="430" cy="272" r="17" fill="#4c79ad"/><text x="430" y="278" text-anchor="middle" class="step">2</text>
+<text x="430" y="328" class="heading">Application UI</text>
+<text x="430" y="364" class="body">Collects learner</text>
+<text x="430" y="392" class="body">preferences and</text>
+<text x="430" y="420" class="body">sends the request</text>
+<rect class="node" x="720" y="240" width="280" height="200" rx="20" fill="#fff" stroke="#4c79ad"/>
+<circle cx="750" cy="272" r="17" fill="#4c79ad"/><text x="750" y="278" text-anchor="middle" class="step">3</text>
+<text x="750" y="328" class="heading">Input Validation</text>
+<text x="750" y="364" class="body">Checks required</text>
+<text x="750" y="392" class="body">fields and input</text>
+<text x="750" y="420" class="body">format</text>
+<rect class="node" x="1040" y="240" width="280" height="200" rx="20" fill="#fff" stroke="#4c79ad"/>
+<circle cx="1070" cy="272" r="17" fill="#4c79ad"/><text x="1070" y="278" text-anchor="middle" class="step">4</text>
+<text x="1070" y="328" class="heading">Resource Retrieval</text>
+<text x="1070" y="364" class="body">Searches the</text>
+<text x="1070" y="392" class="body">approved resource</text>
+<text x="1070" y="420" class="body">catalogue</text>
+<rect class="node" x="1360" y="240" width="280" height="200" rx="20" fill="#fff7e8" stroke="#c18a32"/>
+<circle cx="1390" cy="272" r="17" fill="#b27b20"/><text x="1390" y="278" text-anchor="middle" class="step">5</text>
+<text x="1390" y="328" class="heading">Matching &amp; Ranking</text>
+<text x="1390" y="364" class="body">Scores resources</text>
+<text x="1390" y="392" class="body">by topic, level</text>
+<text x="1390" y="420" class="body">and learning goal</text>
+<rect class="node" x="1680" y="240" width="280" height="200" rx="20" fill="#f2edff" stroke="#8665b5"/>
+<circle cx="1710" cy="272" r="17" fill="#8665b5"/><text x="1710" y="278" text-anchor="middle" class="step">6</text>
+<text x="1710" y="328" class="heading">Evidence Check</text>
+<text x="1710" y="364" class="body">Is there enough</text>
+<text x="1710" y="392" class="body">relevant evidence</text>
+<text x="1710" y="420" class="body">to recommend?</text>
+<path class="line" d="M360 340 H400"/><path class="line" d="M680 340 H720"/><path class="line" d="M1000 340 H1040"/><path class="line" d="M1320 340 H1360"/><path class="line" d="M1640 340 H1680"/>
+<rect class="node" x="980.0" y="540" width="400" height="150" rx="20" fill="#fff7e8" stroke="#c18a32"/>
+<text x="1010.0" y="592" class="heading">Approved Resource Catalogue</text>
+<text x="1010.0" y="630" class="body">Curated free resources</text>
+<text x="1010.0" y="658" class="body">Descriptions • metadata • URLs</text>
+<path class="line" d="M1135.0 440 V540"/><text x="1118.0" y="495" text-anchor="end" class="small">Search</text>
+<path class="line" d="M1225.0 540 V440"/><text x="1242.0" y="495" class="small">Retrieve</text>
+<text x="80" y="752" class="section">2. EVIDENCE-BASED RESPONSE</text>
+<path class="yes" d="M1740 440 V740 H700 V830"/><path class="no" d="M1900 440 V770 H1500 V830"/>
+<rect x="1260.0" y="723" width="80" height="34" rx="17" fill="#e4f4eb"/><text x="1300" y="746" text-anchor="middle" class="label" fill="#21845b">YES</text>
+<rect x="1615.0" y="753" width="70" height="34" rx="17" fill="#fdecec"/><text x="1650" y="776" text-anchor="middle" class="label" fill="#c25454">NO</text>
+<rect class="node" x="440.0" y="830" width="520" height="170" rx="22" fill="#eaf7f0" stroke="#21845b"/>
+<text x="470.0" y="885" class="heading">7A. Grounded AI Explanation</text>
+<text x="470.0" y="930" class="body">Uses retrieved catalogue evidence only</text>
+<text x="470.0" y="960" class="body">Explains why each resource is suitable</text>
+<rect class="node" x="1250.0" y="830" width="500" height="170" rx="22" fill="#fff1f0" stroke="#c25454"/>
+<text x="1280.0" y="885" class="heading">7B. No-Match Response</text>
+<text x="1280.0" y="930" class="body">Used when evidence is missing or weak</text>
+<text x="1280.0" y="960" class="body">Explains that no suitable match was found</text>
+<path class="yes" d="M700 1000 V1050 H850.0 V1090"/><path class="no" d="M1500 1000 V1050 H1350.0 V1090"/>
+<rect class="node" x="650.0" y="1090" width="900" height="140" rx="22" fill="#eaf2ff" stroke="#4c79ad"/>
+<text x="690.0" y="1140" class="heading">8. Recommendation Response to Learner</text>
+<text x="690.0" y="1180" class="body">Resource title • provider • source link • evidence-based explanation</text>
+<text x="690.0" y="1210" class="small">Or a clear no-match message when there is insufficient evidence</text>
+<path class="line" d="M1100.0 1230 V1270"/>
+<rect class="node" x="520.0" y="1270" width="1160" height="120" rx="20" fill="#edf1f5" stroke="#718096"/>
+<text x="560.0" y="1320" class="heading">9. Evaluation &amp; Monitoring</text>
+<text x="560.0" y="1360" class="body">Recommendation relevance • source traceability • explanation grounding • response time • no-match handling</text>
+<text x="80" y="1445" class="small">Conceptual V1 design. Specific models, frameworks and databases will be selected during implementation.</text>
 </svg>
