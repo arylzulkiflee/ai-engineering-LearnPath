@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1250" viewBox="0 0 1800 1250">
+<defs><marker id="arr" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#526176"/></marker><style>
+.title{font: bold 48px Arial;fill:#14243a}.sub{font:23px Arial;fill:#526176}.h{font:bold 25px Arial;fill:#14243a}.p{font:18px Arial;fill:#526176}.edge{stroke:#526176;stroke-width:5;fill:none;marker-end:url(#arr)}.green{stroke:#4a9870}.red{stroke:#c46b61}
+</style></defs>
+<rect width="1800" height="1250" fill="#f7f9fc"/>
+<text x="90" y="95" class="title">LearnPath — V1 System Architecture</text>
+<text x="92" y="145" class="sub">Evidence-based learning resource recommendations using Retrieval-Augmented Generation (RAG)</text>
+<g stroke-width="4">
+<rect x="90" y="220" width="300" height="120" rx="22" fill="#eaf2ff" stroke="#4775a8"/><text x="112" y="263" class="h">Learner</text><text x="112" y="300" class="p">Topic • experience level • goal</text>
+<rect x="470" y="220" width="300" height="120" rx="22" fill="white" stroke="#4775a8"/><text x="492" y="263" class="h">Application Interface</text><text x="492" y="300" class="p">Collect recommendation inputs</text>
+<rect x="850" y="220" width="300" height="120" rx="22" fill="white" stroke="#4775a8"/><text x="872" y="263" class="h">Input Validation</text><text x="872" y="300" class="p">Check fields and input format</text>
+<rect x="1230" y="220" width="440" height="120" rx="22" fill="white" stroke="#4775a8"/><text x="1252" y="263" class="h">Resource Retrieval</text><text x="1252" y="300" class="p">Search approved free-resource catalogue</text>
+<rect x="1230" y="440" width="440" height="140" rx="22" fill="#fff7e8" stroke="#c28a2c"/><text x="1252" y="485" class="h">Approved Resource Catalogue</text><text x="1252" y="525" class="p">Curated metadata, descriptions and source URLs</text>
+<rect x="850" y="465" width="300" height="120" rx="22" fill="white" stroke="#4775a8"/><text x="872" y="508" class="h">Matching &amp; Ranking</text><text x="872" y="545" class="p">Topic, level and goal match</text>
+<rect x="470" y="465" width="300" height="120" rx="22" fill="#f2edff" stroke="#8665b5"/><text x="492" y="508" class="h">Evidence Check</text><text x="492" y="545" class="p">Is evidence sufficient?</text>
+<rect x="80" y="720" width="420" height="150" rx="22" fill="#eaf7f0" stroke="#4a9870"/><text x="102" y="765" class="h">Grounded AI Explanation</text><text x="102" y="805" class="p">Explain using retrieved records only</text>
+<rect x="620" y="720" width="420" height="150" rx="22" fill="#fff1f0" stroke="#c46b61"/><text x="642" y="765" class="h">No-Match Response</text><text x="642" y="805" class="p">Explain when evidence is insufficient</text>
+<rect x="1180" y="720" width="520" height="150" rx="22" fill="#eaf2ff" stroke="#4775a8"/><text x="1202" y="765" class="h">Recommendation Response</text><text x="1202" y="805" class="p">Title • provider • source link • explanation</text>
+<rect x="300" y="1010" width="1200" height="140" rx="22" fill="#eef2f5" stroke="#718096"/><text x="330" y="1060" class="h">Evaluation &amp; Monitoring</text><text x="330" y="1100" class="p">Relevance • source traceability • explanation grounding • latency • no-match handling</text>
+</g>
+<path class="edge" d="M390 280 H470 M770 280 H850 M1150 280 H1230 M1450 340 V440 M1230 510 H1150 M850 525 H770"/>
+<path class="edge green" d="M620 585 L290 720 M500 795 H1180"/>
+<path class="edge red" d="M620 585 L830 720 M1040 795 H1180"/>
+<path class="edge" d="M1440 870 V940 H900 V1010"/>
+<text x="250" y="660" class="h" fill="#39845e">YES</text><text x="795" y="660" class="h" fill="#b75b52">NO</text>
+<text x="90" y="1190" class="p">Conceptual V1 architecture — technology choices intentionally remain implementation-independent.</text>
+</svg>
