@@ -1,43 +1,40 @@
-# LearnPath: Free Learning Resource Finder
+# LearnPath: An Evidence-Based AI Learning Resource Recommendation System Using Retrieval-Augmented Generation
 
 > Recommends free courses, tutorials, and documentation that match a learner's topic and level,
 > grounded in open course outlines and explaining why each resource was picked.
 
 ## Problem Statement
-Free learning resources are spread across many platforms and vary in level, quality, and how up to date they are. Beginners spend a long time searching and often cannot tell whether a resource suits their level. LearnPath helps learners find suitable free resources for a topic such as "beginner Python for data analysis" and explains each recommendation.
+Free learning resources for Python, data analysis, and introductory machine learning are scattered across different platforms, making it difficult for beginners to find materials that match their skill levels and learning goals. Manually searching and comparing resources can also be time-consuming.LearnPath uses Retrieval-Augmented Generation (RAG) to recommend suitable free learning resources from an approved catalogue based on learners' topics, experience levels, and goals. It also provides evidence-based explanations for each recommendation, helping learners find relevant and reliable learning materials more efficiently.
 
 ## Evidence of the Problem
-- Class Central's catalogue alone lists over 100,000 online courses from many providers, so choosing among them is hard (Class Central Help Center, accessed 29 Oct 2026).
-- Coursera reports that nearly two-thirds of its learners are not sure which skills they need to reach their goals (Coursera Blog, "From Catalog to Compass", accessed 29 Oct 2026). This is a company statement, not independent research.
+- Interviews with 12 STEM students found that online learning resources were often disorganized and there were too many choices. Students struggled to assess trustworthiness and usefulness Nguyen et al. (2022)
+- Identified information overload and difficulties independently finding relevant learning resources among students. (2025 Malaysian ODL study)
 
 
-## Initial Related Work / Existing Approaches
-- **Platform search and recommendations (Coursera, edX):** recommend within their own catalogue, and on edX free access is limited while graded work and certificates require payment. They do not compare free resources across providers.
-- **Course aggregators (Class Central):** collect courses from many providers with filters for level, duration, language, and free or paid, plus reviews. The learner still chooses filters and reads reviews, and results do not explain why a course fits.
-- **Learning roadmaps (roadmap.sh):** community-curated role and skill paths with linked resources and progress tracking. Each roadmap is a fixed path, not tailored to the learner's current level, and linked resources are not matched or explained.
+## Related Work / Existing Approaches
+- [Coursera](https://www.coursera.org/) provides online courses, professional certificates, and learning programmes. It helps learners discover educational content based on their interests and learning goals. However, its recommendations mainly focus on courses available within its own platform rather than a broader catalogue of learning resources.
+- [Class Central](https://www.classcentral.com/) collect courses from many providers with filters for level, duration, language, and free or paid, plus reviews. The learner still chooses filters and reads reviews, and results do not explain why a course fits.
+- Retrieval-Augmented Generation (RAG) in Education Li et al. (2025) conducted a systematic survey of RAG applications in education, reviewing 51 studies. Their research found that RAG can support interactive learning systems, educational content generation, and personalized learning.
 
-## Engineering Gap / Limitation
-Existing tools either stay within one platform, depend on the learner's own filtering and judgement, or follow a fixed path. There is no simple way to get recommendations across free resources that are grounded in course outlines and come with an explanation of why each one matches the learner's topic and level.
+## Engineering Gap 
+Lack of evidence-based recommendations: AI-generated recommendations may include irrelevant or unsupported information if they are not grounded in verified resource data.
 
 ## Project Objectives
-- O1: Design a document-grounded assistant that recommends free learning resources by topic and level.
-- O2: Develop the solution with retrieval, an explanation for each recommendation, and guardrails against unsupported or invented resources.
-- O3: Evaluate relevance, level match, groundedness, latency, and safety.
+1. Develop a RAG-based AI learning resource recommendation system that retrieves information from an approved catalogue of free learning resources.
+2. Implement a personalized recommendation mechanism that matches learning resources to users' selected topics, experience levels, and learning objectives.
+3. Evaluate the system's recommendation relevance, matching accuracy, and reliability of AI-generated explanations based on retrieved information.
 
 ## Target Users
 Beginner to intermediate university students learning programming and data skills outside class.
 
 ## Data Sources
-- MIT OpenCourseWare course outlines and syllabi (ocw.mit.edu)
-- freeCodeCamp curriculum (github.com/freeCodeCamp/freeCodeCamp)
-- Harvard CS50 course outlines (cs50.harvard.edu)
+- Automate the Boring Stuff with Python (https://automatetheboringstuff.com/)
+- Python Data Science Handbook (https://github.com/jakevdp/PythonDataScienceHandbook)
+- scikit-learn documentation (https://scikit-learn.org)
+  
 
-Licences and terms are checked before use. Where redistribution is not allowed, the repo links to the sources instead of storing copies.
 
-## Responsible AI Risks
-- **Hallucination:** the assistant may invent a course or URL, so every recommendation must come from a retrieved document.
-- **Outdated or low-quality resources:** content may no longer be maintained, so each result shows its source and date where available.
-- **Bias:** results may favour English-language or well-known platforms.
+
 
 ## Repository Structure
 | Folder | Purpose |
