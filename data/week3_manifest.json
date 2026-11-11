@@ -1,0 +1,24 @@
+{
+    "pipeline_version": "week3-v1",
+    "dataset_name": "LearnPath Learning Resources",
+    "generated_at": "2026-11-11T13:14:51.838448+00:00",
+    "source_file": "learnpath_resources_first20.csv",
+    "prepared_file": "prepared_table.csv",
+    "source_sha256": "ffb8f19c6a8750771cc4108a3fb929deb8ac33f457f7e4a85d4c429d134cc27d",
+    "prepared_sha256": "0c3526dea06de667353357e1e33b3748f2bb3b6911d8273305c6a5a68f08ee50",
+    "record_count": 20,
+    "column_count": 17,
+    "processing_steps": [
+        "CSV ingestion",
+        "Data inspection",
+        "Whitespace trimming",
+        "Exact duplicate removal",
+        "Schema validation",
+        "Resource ID validation",
+        "Domain validation",
+        "URL validation",
+        "CSV export"
+    ],
+    "access_type": "Free resources; individual licence terms require review",
+    "verification_status": "needs_review"
+}
