@@ -50,6 +50,6 @@ Beginner to intermediate university students learning programming and data skill
 
 | **Week** | **Focus** | **Deliverable** | **Status** |
 | --- | --- | --- | --- |
-| W1 | System map + project scope | README + project scope docs | ✅ Done |
-| W2 | Requirements, evaluation criteria + V1 system architecture | `docs/week2_requirements.md`, `docs/week2_evaluation_criteria.md`, `docs/week2_architecture_decisions.md`, `docs/week2_architecture_v1.png` | ✅ Done |
-| W3 | Tabular data engineering and repeatable preparation | `notebooks/week_3_pipeline.ipynb`, `docs/week3_data_inventory.md`, `docs/week3_pipeline_decisions.md`, prepared CSV, `data/week3_manifest.json`, pipeline architecture diagram | In progress |
+| W1 | System map + project scope | README + project scope docs | ✅  |
+| W2 | Requirements, evaluation criteria + V1 system architecture | `docs/week2_requirements.md`, `docs/week2_evaluation_criteria.md`, `docs/week2_architecture_decisions.md`, `docs/week2_architecture_v1.png` | ✅  |
+| W3 | Tabular data engineering and repeatable preparation | `notebooks/week_3_pipeline.ipynb`, `docs/week3_data_inventory.md`, `docs/week3_pipeline_decisions.md`, prepared CSV, `data/week3_manifest.json`, pipeline architecture diagram |  ✅  |
