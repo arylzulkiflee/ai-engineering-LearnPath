@@ -50,3 +50,7 @@ Beginner to intermediate university students learning programming and data skill
 | Week | Focus | Deliverable | Status |
 |------|-------|-------------|--------|
 | W1 | System map + project scope | README + docs | ✅ |
+
+### Week 3 Progress
+
+| W3 | Tabular data engineering and repeatable preparation | Pipeline notebook, data inventory, pipeline decisions, prepared CSV, manifest, architecture diagram | In progress |
