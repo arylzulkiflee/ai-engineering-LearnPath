@@ -11,8 +11,9 @@ The pipeline prepares a structured resource catalogue that can later support ret
 - Selected source: `learnpath_resources_first20.csv`
 - Dataset: LearnPath Learning Resources
 - Selected Topic 3 pathway: **Pathway B — tabular CSV data**
-- Prepared output: `prepared_table.csv`
-- Expected repository destination: `data/processed/prepared_table.csv`
+- Prepared output: `data/prepared_table.csv`
+- Part C selected-pathway copy: `data/pipeline_v1/tabular/prepared_table.csv`
+- Part C manifest: `data/pipeline_v1/tabular/pipeline_manifest.json`
 
 The available notebook evidence shows 20 records and 17 columns. The catalogue covers Python programming (6 records), data analysis (6), and introductory machine learning (8).
 
@@ -76,5 +77,5 @@ The pipeline currently validates URL format, not whether each destination is liv
 
 - Add the exact Topic 2 requirement IDs and trace each one to the pipeline.
 - Add the Part B source comparison and its evidence.
-- Confirm the prepared CSV is committed at `data/processed/prepared_table.csv` on `main`.
-- Add the Part C pathway output and its `pipeline_manifest.json` after the selected pathway notebook cells have been run.
+- The prepared CSV is committed at `data/prepared_table.csv` on `main`.
+- A selected-pathway output copy and Part C manifest have now been added under `data/pipeline_v1/tabular/`. The manifest is based on the existing notebook execution evidence; rerun the pipeline from repository paths to create fresh end-to-end execution evidence.
