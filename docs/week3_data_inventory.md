@@ -1,5 +1,9 @@
 # Week 3 Data Inventory
 
+## Dataset collection and consolidation
+
+The collected dataset entries were first combined into a single Excel workbook. This provided one centralized file for organizing the learning-resource records before data preparation. The consolidated dataset was then saved/exported in CSV format as `learnpath_resources_first20.csv`, which was used as the source file for the Week 3 preparation pipeline.
+
 ## Dataset overview
 
 | Item | Description |
