@@ -53,4 +53,4 @@ Beginner to intermediate university students learning programming and data skill
 | W1 | System map + project scope | README + project scope docs | ✅  |
 | W2 | Requirements, evaluation criteria + V1 system architecture | `docs/week2_requirements.md`, `docs/week2_evaluation_criteria.md`, `docs/week2_architecture_decisions.md`, `docs/week2_architecture_v1.png` | ✅  |
 | W3 | Tabular data engineering and repeatable preparation | `notebooks/week_3_pipeline.ipynb`, `docs/week3_data_inventory.md`, `docs/week3_pipeline_decisions.md`, prepared CSV, `data/week3_manifest.json`, pipeline architecture diagram |  ✅  |
-| W4 | Data quality assessment, coverage/bias review and quality gate | [`docs/week4_data_quality_report.md`](docs/week4_data_quality_report.md) | GO WITH CONDITIONS |
+| W4 | Data quality assessment, coverage/bias review and quality gate | [`docs/week4_data_quality_report.md`](docs/week4_data_quality_report.md) |✅ |
